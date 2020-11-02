@@ -28,7 +28,7 @@ def index():
             print("Going to page: {oi} ")
              
             page = requests.get(f'{j}',{"User-Agent": ua.random})
-            page = requests.get(f'{"https://www.popularmechanics.com/science/a34496675/consciousness-electromagnetic-theory/"}',{"User-Agent": ua.random})
+            #page = requests.get(f'{"https://www.popularmechanics.com/science/a34496675/consciousness-electromagnetic-theory/"}',{"User-Agent": ua.random})
             soup = BeautifulSoup(page.content, 'html.parser')
             print("Finished soup request")
     except:
