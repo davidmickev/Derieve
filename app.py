@@ -21,12 +21,14 @@ def index():
 
     # defining if try statements dont work for some reason
     text = "You probably got blocked"
-    soup = "error"
+    #soup = "error"
 
     try:
-        for j in search("Consciousness", tld="co.in",lang='en', num=1, start = 1, stop = 1, pause=8):
+        #for j in search("Consciousness", tld="co.in",lang='en', num = 1, start = 1, stop = 1, pause=8):
             print("Going to page: {} ".format(rnum))
-            page = requests.get(f'{j}',{"User-Agent": ua.random})
+            
+            #page = requests.get(f'{j}',{"User-Agent": ua.random})
+            page = requests.get(f'{"https://www.popularmechanics.com/science/a34496675/consciousness-electromagnetic-theory/"}',{"User-Agent": ua.random})
             soup = BeautifulSoup(page.content, 'html.parser')
             print("Finished soup request")
     except:
@@ -35,16 +37,16 @@ def index():
 
     try:
         print("OK")
-        text = soup.text[100:1000]
+        text = soup.text[700:10000]
         parsed = text.split(".")
 
         for result in parsed:
             if result.find("onscious") > 0 and len(result) > 5:
                 print(result)
-                regex = re.compile('(\[+)\w\d(\])|[()[\]{}]|[\d]|[@#%^""//]')
+                regex = re.compile('(\[+)\w\d(\])|[()[\]{}]|[\d]|[@#%^""?//?]')
                 final.append(re.sub(regex," ",result))
                 print(final)
-                #if len(final) > 6: break
+                if len(final) > 6: continue
 
         return render_template("index.html", text = final)
 

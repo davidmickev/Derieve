@@ -3,6 +3,8 @@ Flask
 requests
 gunicorn
 gsearch
+fake-useragent
+
 # fcntl
 # astroid==2.4.2
 # autopep8==1.5.4
