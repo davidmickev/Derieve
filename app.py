@@ -24,7 +24,7 @@ def index():
     soup = "error"
 
     try:
-        for j in search("Consciousness", tld="co.in",lang='en', num=1, start = rnum, stop = rnum, pause=8):
+        for j in search("Consciousness", tld="co.in",lang='en', num=1, start = 1, stop = 1, pause=8):
             print("Going to page: {} ".format(rnum))
             page = requests.get(f'{j}',{"User-Agent": ua.random})
             soup = BeautifulSoup(page.content, 'html.parser')
