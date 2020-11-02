@@ -2,7 +2,7 @@ bs4
 Flask
 requests
 gunicorn
-googlesearch
+search
 
 # fcntl
 # astroid==2.4.2
