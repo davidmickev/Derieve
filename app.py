@@ -17,17 +17,17 @@ def index():
     
     ua = UserAgent()
     final = []
-    rnum = int(random.randint(0,1000))
+    oi = int(random.randint(0,100))
 
     # defining if try statements dont work for some reason
     text = "You probably got blocked"
     #soup = "error"
 
     try:
-        #for j in search("Consciousness", tld="co.in",lang='en', num = 1, start = 1, stop = 1, pause=8):
-            print("Going to page: {} ".format(rnum))
+        for j in search("Consciousness", tld="co.in", lang='en', num = 1, start = oi, stop = 2, pause=8):
+            print("Going to page: {oi} ")
              
-            #page = requests.get(f'{j}',{"User-Agent": ua.random})
+            page = requests.get(f'{j}',{"User-Agent": ua.random})
             page = requests.get(f'{"https://www.popularmechanics.com/science/a34496675/consciousness-electromagnetic-theory/"}',{"User-Agent": ua.random})
             soup = BeautifulSoup(page.content, 'html.parser')
             print("Finished soup request")
