@@ -4,6 +4,7 @@ requests
 gunicorn
 gsearch
 fake-useragent
+freeze
 
 # fcntl
 # astroid==2.4.2
