@@ -26,7 +26,7 @@ def index():
     try:
         #for j in search("Consciousness", tld="co.in",lang='en', num = 1, start = 1, stop = 1, pause=8):
             print("Going to page: {} ".format(rnum))
-            
+             
             #page = requests.get(f'{j}',{"User-Agent": ua.random})
             page = requests.get(f'{"https://www.popularmechanics.com/science/a34496675/consciousness-electromagnetic-theory/"}',{"User-Agent": ua.random})
             soup = BeautifulSoup(page.content, 'html.parser')
