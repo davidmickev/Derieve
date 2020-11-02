@@ -5,3 +5,13 @@ body {
 p {
       color: rgb(255, 255, 255);
   }
+
+  ul {
+    text-align: center;
+    list-style: inside;
+  }
+
+  li {
+    text-align: center;
+    list-style: inside;
+  }

@@ -17,7 +17,7 @@ def index():
     
     ua = UserAgent()
     final = []
-    oi = int(random.randint(0,100))
+    oi = int(random.randint(0,300))
 
     # defining if try statements dont work for some reason
     text = "You probably got blocked"
