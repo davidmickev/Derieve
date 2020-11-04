@@ -7,10 +7,10 @@ from googlesearch import search
 import random
 from fake_useragent import UserAgent
 
-app = Flask(__name__)
+Derieve = Flask(__name__)
 
 # Route to /Index or next "action"
-@app.route('/')
+@Derieve.route('/')
 
 #define app functionality
 def index():
@@ -56,4 +56,4 @@ def index():
 
     return render_template("index.html", text = text)
 
-app.run()
+Derieve.run()
